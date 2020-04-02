@@ -1,7 +1,12 @@
 const cipher = {
-  encode: function (string, offset) {
+  encode: function (offset, string) {
 
-    let valor = " ";
+    let valor = "";
+
+    if (string == "") {
+      alert("Preencha o campo de mensagem!")
+    }
+
     for (let i = 0; i < string.length; i++) {
 
       let c = string.charAt(i);
@@ -13,19 +18,47 @@ const cipher = {
     }
     return valor;
   },
-  decode: function (string, offset) {
+  decode: function (offset, string) {
 
-    let valor = " ";
+    let valor = "";
+
+    if (string == "") {
+      alert("Preencha o campo de mensagem!")
+    }
     for (let i = 0; i < string.length; i++) {
 
       let c = string.charAt(i);
-      let d = (((c.charCodeAt(0) - 65 - offset) % 26) + 65);
-      let e = String.fromCharCode(d);
+   
+      let partD = (c.charCodeAt(0) - 65 - offset + 52);
 
-      valor += e;
+      if (partD < 0) {
+        let d = (partD % 26) + 90;
+        let e = String.fromCharCode(d);
+        valor += e;
+      } else {
+        let d = (partD % 26) + 65;
+        let e = String.fromCharCode(d);
+        valor += e;
+      }
     }
     return valor;
   }
 };
+
+/*function validaDados(string){
+
+  for( let i=0; i < string.length; i++){
+    let chr = String.fromCharCode(i);
+    if (char <)
+
+  }
+  
+
+
+  if(string==""){
+    alert("Preencha o campo de mensagem!")
+  }
+  
+}*/
 
 export default cipher;
