@@ -3,8 +3,8 @@ const cipher = {
 
     let valor = "";
 
-    if (string == "") {
-      alert("Preencha o campo de mensagem!")
+    if (string == "" && offset == "") {
+      alert("Preencha o campo de mensagem e escolha a chave!")
     }
 
     for (let i = 0; i < string.length; i++) {
@@ -22,8 +22,8 @@ const cipher = {
 
     let valor = "";
 
-    if (string == "") {
-      alert("Preencha o campo de mensagem!")
+    if (string == "" && offset == "") {
+      alert("Preencha o campo de mensagem e escolha a chave!")
     }
     for (let i = 0; i < string.length; i++) {
 

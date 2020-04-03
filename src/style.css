@@ -1,23 +1,32 @@
 * {
-    background-color: lightgray;
+    background-color:black;
+    font-family: monospace;
 }
 
 h1 {
     text-align: center;
     padding: 30px 0 40px;
     display: block;
-    color: black;
-    font-family: 'Pacifico', cursive;
+    color: rgb(17, 139, 17);
+    font-size: 40px;
 }
 
 .principal {
     text-align: center;
+    width: 100%;
 }
 
-.mensagem {
-    display: inline-block;
-    vertical-align: top;
-    margin: 30px; 
+
+#msg {
+    color: white;
+    font-size: 16px;
+    width: 16%;
+    height: 215px;
+    position: absolute;
+    right: 52%;
+    top: 32%;
+    padding: 5px;
+    
 }
 
 .titulo-mensagem {
@@ -27,19 +36,32 @@ h1 {
 
 .offset  {
     display: inline-block;
-    padding: 20px;
-    margin: 30px;
+    padding: 10px;
+    margin: 20px;
+    position: absolute;
+    right: 68%;
+    top: 25%;
+    
+}
+
+.titulo-chave {
+    color: rgb(17, 139, 17);
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0px 5px;
 }
 
 #resultado {
+    display: inline-block;
     text-align: center;
     font-size: 20px;
-    border: 2px solid black;
-    border-radius: 10px;
-    width: 30%;
-    height: 30px;
+    border: 1px solid lightgray;
+    color: white;
+    width: 16%;
+    height: 215px;
     position: absolute;
-    left: 35%;
+    left: 52%;
+    top: 32%;
     padding: 5px;
 }
 
@@ -48,16 +70,71 @@ h1 {
     margin: 40px 0 30px;
 }
 
+
+#chave {
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    width: 60%;
+    height: 30px;
+}
+
 .botao {
     padding: 10px;
     margin: 30px 10px 0;
-    width: 20%;
-    height: 50px;
+    width: 10%;
+    height: 40px;
     font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+#botao-cifra {
+    position: absolute;
+    right: 50%;
+    top: 70%;
+    background-color: green;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+#botao-cifra:hover, #botao-decifra:hover {
+    background-color: rgb(86, 143, 86);
+    transform: scale(1.2);
+}
+
+#botao-decifra {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    background-color: green;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+#reset {
+    position: absolute;
+    right: 26%;
+    top: 63%;
+    color: white;
+    background-color: green;
+    font-weight: bold;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+#reset:hover {
+    color: green;
+    background-color: white;
+    transform: scale(1.2);
 }
 
 footer  {
     text-align: center;
-    margin: 180px 0 30px;
-    
+    margin: 10px 0 30px;
+    position: absolute;
+    top: 90%;
+    left: 45%;
+    color: white;
+    font-weight: bold;
 }
