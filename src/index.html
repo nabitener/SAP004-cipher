@@ -8,8 +8,9 @@
 </head>
 
 <body>
+  <img src="plano-de-fundo.jpg" alt="Imagem de um cadeado">
   <div class="titulo">
-    <h1>Cifra de César</h1>
+    <h1>The safe message</h1>
   </div>
 
   <main class="principal">
@@ -22,8 +23,8 @@
       <input type="number" name="chave" id="chave" min="1" max="33" required>
     </div>
 
-    <div class="resposta" id="resultado"></div>
-
+    <textarea name="resposta" class="resposta" id="resultado" cols="30" rows="15" readonly></textarea>
+    
     <div class="escolha">
       <input type="button" value="Cifrar" class="botao" id="botao-cifra">
       <input type="button" value="Decifrar" class="botao" id="botao-decifra">
