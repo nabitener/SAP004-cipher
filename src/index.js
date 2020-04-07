@@ -1,6 +1,10 @@
 import cipher from './cipher.js';
 
 
+let comeco = document.getElementById("iniciar");
+comeco.addEventListener("click", ok);
+
+
 let botCifra = document.getElementById("botao-cifra");
 botCifra.addEventListener("click", cifra);
 
@@ -13,11 +17,10 @@ botReset.addEventListener("click", reset);
 function reset() {
 
     if(document.getElementById("msg").value!="") {
-        
         document.getElementById("msg").value="";
         document.getElementById("chave").value="";
         document.getElementById("resultado").innerHTML="";
-}
+    }
 }
 
 function cifra(codigo, offset) {
@@ -40,6 +43,10 @@ function decifra(codigo, offset) {
     return resultado;
 }
 
+function ok () {
+    let resumo = document.getElementById("instrucao").style.display = "none";
+    let aparecer = document.getElementById("programa").style.display = "block";
+}
 
 
 
