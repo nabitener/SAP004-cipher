@@ -24,7 +24,7 @@ function reset() {
 }
 
 function cifra(codigo, offset) {
-    codigo = document.getElementById("msg").value.toUpperCase();
+    codigo = document.getElementById("msg").value;
     offset = parseInt(document.getElementById("chave").value);
 
     let resultado = document.getElementById("resultado");
@@ -34,7 +34,7 @@ function cifra(codigo, offset) {
 }
 
 function decifra(codigo, offset) {
-    codigo = document.getElementById("msg").value.toUpperCase();
+    codigo = document.getElementById("msg").value;
     offset = parseInt(document.getElementById("chave").value);
 
     let resultado = document.getElementById("resultado");
@@ -44,8 +44,8 @@ function decifra(codigo, offset) {
 }
 
 function ok () {
-    let resumo = document.getElementById("instrucao").style.display = "none";
-    let aparecer = document.getElementById("programa").style.display = "block";
+    document.getElementById("instrucao").style.display = "none";
+    document.getElementById("programa").style.display = "block";
 }
 
 
