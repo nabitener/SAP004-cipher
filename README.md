@@ -5,7 +5,7 @@
 
 * [1. Resumo do projeto](#1-resumo-do-projeto)
 * [2. Descrição do produto](#2-descrição-do-produto)
-* [3. Scripts / Arquivos](#3-scripts-/-arquivos)
+* [3. Scripts/Arquivos](#3-scripts-/-arquivos)
 * [4. Tecnologias Envolvidas](#4-tecnologias-envolvidas)
 
 
@@ -20,12 +20,12 @@
 
   Be safe utiliza o método de cifra de César para cifrar e decrifragar as mensagens, esse método se baseia na substituição de letras, portanto com uma chave de deslocamento, que é um número fixo de posições que usamos para substituir cada letra, conseguimos cifrar/decifrar uma mensagem. A seguir temos uma descrição do produto:
 
-**1.** O funcionamento é bem intuitivo, na primeira página mostramos uma breve apresentação sobre o Be safe e um botão (input type button) para iniciar;
-**2.** Quando clicamos no botão "iniciar" aparece um nova tela com um formulário (form) para realizarmos a cifragem ou decrifragem; 
-**3.** No campo (textarea) em que está incrito "Digite a mensagem", digitamos a mensagem;
-**4.** Em seguida no campo "Chave" (input type number) escolhemos a chave de deslocamento, nesse campo é aceito somente números positivos de 1 a 33;
-**5.** Após esses passos clicamos no botão (input type button) de crifragem se queremos crifrar a mensagem ou no botão (input type button) de decrifragem se queremos decifrar a mensagem. O resultado dessa operação aparece no campo (textarea readonly) que está em cinza.
-**6.** O botão (input type button) "Limpar" serve para limpar as informações na página.
+1. O funcionamento é bem intuitivo, na primeira página mostramos uma breve apresentação sobre o Be safe e um botão (input type button) para iniciar;
+2. Quando clicamos no botão "iniciar" aparece um nova tela com um formulário (form) para realizarmos a cifragem ou decrifragem; 
+3. No campo (textarea) em que está incrito "Digite a mensagem", digitamos a mensagem;
+4. Em seguida no campo "Chave" (input type number) escolhemos a chave de deslocamento, nesse campo é aceito somente números positivos de 1 a 33;
+5. Após esses passos clicamos no botão (input type button) de crifragem se queremos crifrar a mensagem ou no botão (input type button) de decrifragem se queremos decifrar a mensagem. O resultado dessa operação aparece no campo (textarea readonly) que está em cinza;
+6. O botão (input type button) "Limpar" serve para limpar as informações na página.
 
 **Obs.: O programa não aceita caracteres especiais, "ç" e números.**
 
