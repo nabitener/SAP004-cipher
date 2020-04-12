@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Be safe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Girassol&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="instrucao">
+    <p class="vindas"><strong>BE SAFE</strong><br><br> Envie e receba mensagens com mais segurança,
+      cifre e/ou descrife suas mensagens confidenciais.<br><br><em>
+        <strong> OBS.: O programa não reconhece caracteres especiais, "ç" e números.</strong> </em></p>
+    <input type="button" value="Iniciar" id="iniciar">
+  </div>
+
+  <main id="programa">
+    <div class="titulo">
+      <h1>BE SAFE</h1>
+    </div>
+
+    <form id="formulario">
+
+      <fieldset class="caixas">
+        <textarea name="mensagem" id="msg" cols="40" rows="20" placeholder="Digite a mensagem" required></textarea>
+        <textarea name="resposta" id="resultado" cols="40" rows="20" readonly></textarea>
+      </fieldset>
+
+      <fieldset class="escolha">
+        <label for="chave" class="titulo-chave">Chave</label>
+        <input type="number" class="class-chave" name="chave" id="chave" min="1" max="33" required>
+      </fieldset>
+
+      <fieldset class="botoes">
+        <input type="button" value="Cifrar" class="botao" id="botao-cifra">
+        <input type="button" value="Decifrar" class="botao" id="botao-decifra">
+        <button type="reset" id="reset">Limpar</button>
+      </fieldset>
+
+    </form>
+
+
+  </main>
+
+  <footer>
+    <p>By Nathalia Bitener</p>
+    <a href="http://www.freepik.com"></a>
+  </footer>
+  <script src="index.js" type="module"></script>
+</body>
+
+</html>
