@@ -2,19 +2,20 @@ const cipher = {
   encode: function (offset, string) {
     validacao(offset, string);
     let valor = "";
+    const letrasAlfabeto = 26;
 
-    for (let i = 0; i < string.length; i++) {
-      let c = string.charCodeAt(i);
+    for (let contador = 0; contador < string.length; contador++) {
+      let letra = string.charCodeAt(contador);
      
-      if (c >= 65 && c <= 90) {
-        let d = (((c - 65 + offset) % 26) + 65);
-        let e = String.fromCharCode(d);
-        valor += e;
-      }else if (c >= 97 && c <= 122) {
-        let d = (((c - 97 + offset) % 26) + 97);
-        let e = String.fromCharCode(d);
-        valor += e;
-      }else if (c == 32) { 
+      if (letra >= "A".charCodeAt(0) && letra <= "Z".charCodeAt(0)) {
+        let numNovaLetra = (((letra - "A".charCodeAt(0) + offset) % letrasAlfabeto) + "A".charCodeAt(0));
+        let novaLetra = String.fromCharCode(numNovaLetra);
+        valor += novaLetra;
+      }else if (letra >= "a".charCodeAt(0) && letra <= "z".charCodeAt(0)) {
+        let numNovaLetra = (((letra - "a".charCodeAt(0) + offset) % letrasAlfabeto) + "a".charCodeAt(0));
+        let novaLetra = String.fromCharCode(numNovaLetra);
+        valor += novaLetra;
+      }else if (letra == " ".charCodeAt(0)) { 
         valor += " ";
       } }
     return valor;
@@ -22,19 +23,20 @@ const cipher = {
   decode: function (offset, string) {
     validacao(offset, string);
     let valor = "";
+    const letrasAlfabeto = 26;
 
-    for (let i = 0; i < string.length; i++) {
-      let c = string.charCodeAt(i);
+    for (let contador = 0; contador < string.length; contador++) {
+      let letra = string.charCodeAt(contador);
     
-      if (c >= 65 && c <= 90) {
-        let d = (((c - 90 - offset) % 26) + 90);
-        let e = String.fromCharCode(d);
-        valor += e;
-      }else if (c >= 97 && c <= 122) {
-        let d = (((c - 122 - offset) % 26) + 122);
-        let e = String.fromCharCode(d);
-        valor += e;
-      }else if (c == 32) { 
+      if (letra >= "A".charCodeAt(0) && letra <= "Z".charCodeAt(0)) {
+        let numNovaLetra = (((letra - "Z".charCodeAt(0) - offset) % letrasAlfabeto) + "Z".charCodeAt(0));
+        let novaLetra = String.fromCharCode(numNovaLetra);
+        valor += novaLetra;
+      }else if (letra >= "a".charCodeAt(0) && letra <= "z".charCodeAt(0)) {
+        let numNovaLetra = (((letra - "z".charCodeAt(0) - offset) % letrasAlfabeto) + "z".charCodeAt(0));
+        let novaLetra = String.fromCharCode(numNovaLetra);
+        valor += novaLetra;
+      }else if (letra == " ".charCodeAt(0)) { 
         valor += " ";}
       }
     return valor;

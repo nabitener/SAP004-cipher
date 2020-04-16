@@ -1,53 +1,44 @@
-import cipher from './cipher.js';
+import cipher from "./cipher.js";
 
-
-let comeco = document.getElementById("iniciar");
+const comeco = document.getElementById("iniciar");
 comeco.addEventListener("click", ok);
 
-
-let botCifra = document.getElementById("botao-cifra");
+const botCifra = document.getElementById("botao-cifra");
 botCifra.addEventListener("click", cifra);
 
-let botDecifra = document.getElementById("botao-decifra");
+const botDecifra = document.getElementById("botao-decifra");
 botDecifra.addEventListener("click", decifra);
 
-let botReset = document.getElementById("reset");
+const botReset = document.getElementById("reset");
 botReset.addEventListener("click", reset);
 
 function reset() {
-
-    if(document.getElementById("msg").value!="") {
-        document.getElementById("msg").value="";
-        document.getElementById("chave").value="";
-        document.getElementById("resultado").innerHTML="";
-    }
+  document.getElementById("msg").value = "";
+  document.getElementById("chave").value = "";
+  document.getElementById("resultado").textContent = "";
 }
 
 function cifra(codigo, offset) {
-    codigo = document.getElementById("msg").value;
-    offset = parseInt(document.getElementById("chave").value);
+  codigo = document.getElementById("msg").value;
+  offset = parseInt(document.getElementById("chave").value);
 
-    let resultado = document.getElementById("resultado");
-    resultado.innerHTML = cipher.encode(offset, codigo);
-    
-    return resultado;
+  const resultado = document.getElementById("resultado");
+  resultado.textContent = cipher.encode(offset, codigo);
+
+  return resultado;
 }
 
 function decifra(codigo, offset) {
-    codigo = document.getElementById("msg").value;
-    offset = parseInt(document.getElementById("chave").value);
+  codigo = document.getElementById("msg").value;
+  offset = parseInt(document.getElementById("chave").value);
 
-    let resultado = document.getElementById("resultado");
-    resultado.innerHTML = cipher.decode(offset, codigo);
+  const resultado = document.getElementById("resultado");
+  resultado.textContent = cipher.decode(offset, codigo);
 
-    return resultado;
+  return resultado;
 }
 
-function ok () {
-    document.getElementById("instrucao").style.display = "none";
-    document.getElementById("programa").style.display = "block";
+function ok() {
+  document.getElementById("instrucao").style.display = "none";
+  document.getElementById("programa").style.display = "block";
 }
-
-
-
-

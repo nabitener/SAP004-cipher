@@ -1,7 +1,7 @@
 * {
     font-family: 'Girassol', cursive;
 }
-body {
+.corpo {
   background-image: url("imagem/120020-OPTVAF-325.jpg");
   background-attachment: fixed;
   background-size: 100% 99.9%;
@@ -56,7 +56,7 @@ body {
     display: none;
 }
 
-h1 {
+.logo {
     text-align: center;
     padding: 30px 0 30px;
     color: rgb(21, 151, 21);
@@ -157,7 +157,7 @@ h1 {
     cursor: pointer;
 }
 
-footer {
+.rodape {
     text-align: center;
     font-size: 14px;
     color: white;
