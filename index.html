@@ -7,37 +7,34 @@
   <link href="https://fonts.googleapis.com/css2?family=Girassol&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="reset.css" />
 </head>
 
 <body class="corpo">
-  <div id="instrucao">
+  <div id="instrucao" class="instrucao">
     <p class="vindas"><strong>BE SAFE</strong><br><br> Envie e receba mensagens com mais segurança,
       cifre e/ou descrife suas mensagens confidenciais.<br><br><em>
         <strong> OBS.: O programa não reconhece caracteres especiais, "ç" e números.</strong> </em></p>
-    <input type="button" value="Iniciar" id="iniciar">
+    <input type="button" value="Iniciar" id="iniciar" class="iniciar">
   </div>
 
-  <main id="programa">
+  <main id="programa" class="programa">
     <header class="titulo">
       <h1 class="logo">BE SAFE</h1>
     </header>
-
-    <form id="formulario">
-
+    <form id="formulario" class="formulario">
       <fieldset class="caixas">
-        <textarea name="mensagem" id="msg" cols="40" rows="20" placeholder="Digite a mensagem" required></textarea>
-        <textarea name="resposta" id="resultado" cols="40" rows="20" readonly></textarea>
+        <textarea name="mensagem" id="msg" cols="40" rows="20" class="msg caixa" placeholder="Digite a mensagem" required></textarea>
+        <textarea name="resposta" id="resultado" class="resultado caixa" cols="40" rows="20" readonly></textarea>
       </fieldset>
-
       <fieldset class="escolha">
         <label for="chave" class="titulo-chave">Chave</label>
         <input type="number" class="class-chave" name="chave" id="chave" min="1" max="33" required>
       </fieldset>
-
       <fieldset class="botoes">
         <input type="button" value="Cifrar" class="botao" id="botao-cifra">
         <input type="button" value="Decifrar" class="botao" id="botao-decifra">
-        <button type="reset" id="reset">Limpar</button>
+        <button type="reset" id="reset" class="btn-reset">Limpar</button>
       </fieldset>
 
     </form>

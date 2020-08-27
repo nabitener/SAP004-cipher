@@ -40,5 +40,5 @@ function decifra(codigo, offset) {
 
 function ok() {
   document.getElementById("instrucao").style.display = "none";
-  document.getElementById("programa").style.display = "block";
+  document.getElementById("programa").style.display = "flex";
 }
